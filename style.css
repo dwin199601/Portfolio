@@ -621,7 +621,9 @@ align-items: center;
 }
 
 @media screen and (max-width: 700px) {
-
+    .circle1, .circle2{
+        display: none;
+    }
     
     .content{
         display: flex;
