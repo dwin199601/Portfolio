@@ -1,0 +1,411 @@
+*{
+    font-family: 'Lato', sans-serif;
+}
+.images{
+    position: relative;
+    padding-bottom: 1rem;   
+    
+}
+
+.boxImage{
+    flex: 1 1 120px;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+   
+
+
+}
+.boxImage h2{
+    margin: 1rem;
+    color: black;
+    font-size: 1.2rem;
+    
+}
+
+
+
+.imageImg{
+    display: block;
+    width: 430px;
+    height: 350px;
+    border-radius: 5px;
+    box-shadow: 6px 6px 20px 
+    rgba(23, 7, 68, 0.8);
+   
+}
+.imageOverlay{
+    position: absolute; /* we must have it as absolute to set top, left, etc..*/
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6); /* to set dark color for image*/
+    color: white;
+    display: flex;
+   
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0; /* to hide initial text by default*/
+    transition: opacity 0.25s;
+}
+
+.imageOverlay:hover{
+ opacity: 1;
+}
+
+.imageOverlay > * { /*targeting all childs */
+ transform: translateY(20px);
+ transition: transform 0.25s;
+}
+
+.imageOverlay:hover>*{
+    transform: translateY(0);
+   }
+
+.imageOverlay_blur{
+backdrop-filter: blur(5px);
+}
+
+.imageTitle{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.imgdescription {
+    font-size: 1em;
+    margin-top: 10px;
+}
+.imgdescription1{
+    margin-top: 5px;
+    font-size: 13px;
+}
+
+.AllContent{
+    background: linear-gradient(to right top, #38aa8e, #8877e9);
+    min-height: 150vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+   
+}
+.AllContent h3{
+    margin-top: 1rem;
+    box-shadow: 6px 6px 20px 
+    rgba(51, 50, 50, 0.8);
+    font-size: 2rem;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+.AllContent h4{
+
+    margin-top: 5rem;
+    font-size: 1.5rem;
+}
+
+
+
+.BoxElement{
+    display: flex;
+    flex-flow: row wrap;
+   
+}
+
+.ProjectBox{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+    width: 100%;
+    box-shadow: 6px 6px 20px 
+    rgba(8, 5, 158, 0.8);
+    
+}
+
+.Project{
+    margin: 2rem;
+    flex: 1 1 200px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Project h1{
+    color: #111111;
+    margin-bottom: 1rem;
+}
+.projectGitImage{
+    width: 65px;
+    height: 60px;
+    margin: 1rem;
+}
+.projectGitImage:hover{
+    cursor: pointer;
+    animation-name: rotatethis;
+    animation-duration: 4s;
+  }
+
+  @keyframes rotatethis {
+    0% {
+      transform: rotate(5deg);
+      border-color: aqua;
+    }
+    25% {
+      transform: rotate(90deg);
+      border-color: aquamarine;
+    }
+    50% {
+      transform: rotate(180deg);
+      border-color: cadetblue;
+    }
+    100% {
+      transform: rotate(360deg);
+      border-color: white;
+    }
+  }
+  
+
+
+.skillsUsed{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.projectDescription{
+    font-size: 1.2em;
+    font-style: bold;
+    
+}
+.projectDescription p{
+    margin: 10px;
+}
+
+
+.container {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+   
+  }
+   
+  .button {
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    display: inline-block;
+    border-radius: 1.5rem;
+    background-color: rgb(6, 47, 94);
+    color: #f7f8f8;
+    padding: 1rem 2rem;
+    font-weight:bold;
+  }
+  .button:hover{
+      color: yellow;
+  }
+   
+  .popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(68, 68, 83, 0.8);
+    z-index: 2;
+    visibility: hidden;
+    opacity: 3;
+    overflow: hiden;
+    transition: .64s ease-in-out;
+  }
+  .popup-inner {
+    border-radius: 5px;
+    position: relative;
+    bottom: -100vw;
+    right: -100vh;
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+    max-height: 600px;
+    width: 60%;
+    height: 80%;
+    background: linear-gradient(to right top, #111111, #9eddfa);
+    transform: rotate(30deg);
+    transition: .80s ease-in-out;
+  }
+  .popup iframe{
+      width: 100%;
+      height: 100%;
+  }
+ 
+  .popup:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup:target .popup-inner {
+    bottom: 0;
+    right: 0;
+    transform: rotate(0);
+  }
+  .closepopup {
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: .875rem;
+    font-weight: bold;
+    border-radius: 100%;
+    background-color: #e2351e;
+    z-index: 4;
+    color: #fff;
+    line-height: 3rem;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+
+  @media screen and (max-width: 600px) {
+
+    .projectGitImage:hover{
+      cursor: pointer;
+      animation-name: none;
+      animation-duration: none;
+    }  
+
+  .imageOverlay{
+      background: rgba(8, 6, 19, 0.6); /* to set dark color for image*/
+      color: white;
+      opacity: 1; 
+      
+  }
+  .imageOverlay > * {
+   transform: none;
+   transition: none;
+  }
+  .imgdescription{
+    font-size: 1.5rem;
+  }
+  .imgdescription1{
+    font-size: 15px;
+  }
+
+  .boxImage h2{
+   
+    font-size: 1.8rem;
+    color: #111111;
+    
+}
+.ProjectBox{
+  width: 100%;
+  box-shadow: none;
+  background: linear-gradient(to right top, #38aa8e, #4b4b47);
+
+}
+h4{
+
+  box-shadow: 6px 6px 20px 
+  rgba(51, 50, 50, 0.8);
+  padding: 5px;
+  border-radius: 4px;
+}
+.Project h1, .skillsUsed{
+  color: #f1f7d8;
+}
+.Project h2{
+  font-size: 20px;
+  color: #f1f7d8;
+}
+
+.button {
+  font-size: 15px;
+  color: #f7f8f8;
+  padding: 16px 16px;
+ 
+}
+}
+
+
+@media screen and (max-width: 480px) {
+  .imageOverlay{
+    background: rgba(8, 6, 19, 0.6);
+    color: white; 
+}
+.imageImg{
+    width: 350px;
+    height: 310px;
+}
+.imageTitle{
+  font-size: 15px;
+}
+.imgdescription1{
+  margin-top: 10px;
+  width: 70%;
+}
+
+.boxImage h2{
+  margin: 16px;
+  color: black;
+  font-size: 1.2rem;
+  
+}
+.date{
+  font-size: 16px;
+}
+
+.Project h1{
+  font-size: 20px;
+}
+
+}
+
+
+@media screen and (max-width: 450px) {
+
+  .imageImg{
+    width: 270px;
+    height: 230px;
+}
+
+.imgdescription, .skillsUsed{
+  font-size: 12px;
+}
+.projectDescription{
+  font-size: 15px;
+}
+
+
+}
+
+@media screen and (max-width: 340px) {
+  .imageImg{
+    width: 250px;
+    height: 200px;
+    
+}
+.imageTitle{
+  font-size: 12px;
+}
+.button {
+  font-size: 12px;
+  color: #f7f8f8;
+  padding: 10px 10px;
+ 
+}
+.projectGitImage{
+  width: 55px;
+  height: 45px;
+  
+}
+
+}

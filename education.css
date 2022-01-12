@@ -1,0 +1,406 @@
+
+
+
+.slide-container{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 700px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 10px;
+    opacity: 0.8;
+    box-shadow: 6px 6px 20px 
+    rgba(51, 50, 50, 0.8);
+    background-color: antiquewhite;
+}
+
+.image-container{
+    display: flex;
+    width: 2400px;
+    height: 500px;
+    position: relative;
+    transition: left 2s;
+   
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+}
+
+.slider-image{
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    width: 700px;
+    height: 500px;
+}
+
+.button-container{
+    top: -20px;
+    position: relative;
+}
+
+.slider-button{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: rgb(244, 244, 248);
+    border-color: rgb(7, 25, 131);
+    border-width: 2px;
+    border-style: solid;
+}
+.slider-button:hover{
+    border-color: aquamarine;
+}
+#slider-image-1:target ~ .image-container{
+    left: 0px;
+}
+#slider-image-2:target ~ .image-container{
+    left: -700px;
+}
+#slider-image-3:target ~ .image-container{
+    left: -1400px;
+}
+#slider-image-4:target ~ .image-container{
+    left: -2090px;
+}
+
+
+
+
+
+.allContent{
+    margin: 2rem;
+    min-height: 80vh;
+    
+    background: linear-gradient(to right bottom,
+    rgba(131, 118, 4, 0.5), 
+    rgba(228, 222, 166,0.5));
+    border-radius: 1rem;  
+}
+.allContent h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding-top: 1rem;
+    font-weight: 600;
+    font-size: 2rem;
+    opacity: 0.8;
+    box-shadow: 6px 6px 20px 
+    rgba(51, 50, 50, 0.8);
+    width: 250px;
+   
+    margin-left: 2rem;
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+.educationBox{
+   
+    margin: 2rem;
+    display: flex;
+    /*flex-flow: row wrap;*/
+    background: linear-gradient(to left top, rgba(255,255,255,1),
+    rgba(255,255,255,0.6));
+    border-radius: 10px;
+    box-shadow: 6px 6px 20px/* 20px represent the amount of blure*/
+    rgba(51, 50, 50, 0.5);
+
+    
+}
+.educationBox img{
+    width: 230px;
+    height: 230px;
+    flex: 30%;
+    display: flex;
+    margin: 1rem;
+    background: linear-gradient(to left top, rgb(8, 236, 217),
+    rgba(255,255,255,0.6));
+    border-radius: 5px;
+    box-shadow: 6px 6px 20px/* 20px represent the amount of blure*/
+    rgba(4, 13, 92, 0.5);
+}
+.educationBox img:hover{
+    box-shadow: 6px 6px 20px/* 20px represent the amount of blure*/
+    rgba(194, 236, 7, 0.5); 
+    cursor: pointer;
+}
+.educationBox a{
+    text-decoration: none;
+}
+
+.educationInfo{
+ flex: 70%;
+ margin-left: 3rem;
+ display: flex;
+ flex-flow: column wrap;
+
+}
+.educationInfo *{
+   margin: 5px; 
+}
+
+.educationInfo ul {
+    list-style-type:none; 
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+
+    .image-container{
+        width: 1500px;
+        height: 500px;
+    }
+    .slide-container{
+
+        width: 500px;
+        height: 400px;
+       
+    }
+
+
+    .slider-image{
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        width: 500px;
+        height: 400px;
+    }
+
+    #slider-image-1:target ~ .image-container{
+        left: 0px;
+    }
+    #slider-image-2:target ~ .image-container{
+        left: -500px;
+    }
+    #slider-image-3:target ~ .image-container{
+        left: -1000px;
+    }
+    #slider-image-4:target ~ .image-container{
+        left: -1500px;
+    }
+    .button-container{
+        top: -130px;
+        position: relative;
+    }
+}
+
+@media screen and (max-width: 770px) {
+
+    .educationBox{
+     width: 90%;
+     display: flex;
+     flex-flow: column wrap;
+     justify-content: center;
+     align-items: center;
+    
+     
+     background-color: rgba(187, 181, 181, 0.8);
+     box-shadow: 6px 6px 20px
+     rgba(18, 18, 19, 0.5);
+    }
+    .educationBox * {
+        flex: 1 1 60;
+        
+    }
+    .educationBox img{
+
+        width: 300px;
+        height: 280px;
+        display: flex;
+       
+    }
+
+    .allContent{
+        background: none;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+    }
+   .educationInfo {
+       margin: 1rem;
+   }
+   .educationInfo h2{
+    font-family: 'Lato', sans-serif;
+    font-family: 'Vujahday Script', cursive;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(73, 12, 12);
+   }
+}
+
+@media screen and (max-width: 600px) {
+
+
+    .educationBox{
+        width: 65%;
+    }
+    .educationBox img{
+        width: 250px;
+        height: 230px;
+    }
+    
+    .image-container{
+        width: 1280px;
+        height: 320px;
+    }
+    .slide-container{
+
+        width: 320px;
+        height: 320px;
+       
+    }
+
+
+    .slider-image{
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        width: 320px;
+        height: 290px;
+    }
+
+    #slider-image-1:target ~ .image-container{
+        left: 0px;
+    }
+    #slider-image-2:target ~ .image-container{
+        left: -320px;
+    }
+    #slider-image-3:target ~ .image-container{
+        left: -640px;
+    }
+    #slider-image-4:target ~ .image-container{
+        left: -950px;
+    }
+    .button-container{
+        top: -20px;
+        position: relative;
+    }
+
+    
+.slider-button{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: rgb(12, 12, 12, 0.5);
+   
+}
+.slider-button:hover{
+    border: none;
+    border-color: transparent;
+    background-color: rgba(126, 9, 9, 0.5);;
+}
+
+
+@media screen and (max-width: 600px) {
+
+    .allContent h1{
+    
+        padding: 5px;
+        font-weight: 600;
+        opacity: 0.8;
+        margin: 10px;
+        box-shadow: 6px 6px 20px 
+        rgba(51, 50, 50, 0.8);
+        width: 180px;
+       
+        
+    }
+
+    .educationBox{
+        width: 65%;
+    }
+    .educationBox img{
+        width: 200px;
+        height: 180px;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+
+    .allContent h1{
+    
+        padding: 5px;
+        font-weight: 600;
+        font-size: 1.5rem;
+        opacity: 0.8;
+        margin: 10px;
+        
+        width: 130px;
+       
+        
+    }
+
+}
+@media screen and (max-width: 420px) {
+    .educationBox{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    
+    .educationBox{
+        width: 70%;
+    }
+    .educationInfo h4, li{
+       font-size: 12px;
+    }
+    .educationInfo h2{
+        font-size: 15px;
+        margin: 5px;
+    }
+    
+    .educationBox img{
+        width: 150px;
+        height: 120px;
+        border-radius: 10px;
+    }
+
+    .image-container{
+        width: 600px;
+        height: 220px;
+    }
+    .slide-container{
+
+        width: 220px;
+        height: 205px;
+       
+    }
+
+
+    .slider-image{
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        width: 220px;
+        height: 200px;
+    }
+
+    #slider-image-1:target ~ .image-container{
+        left: 0px;
+    }
+    #slider-image-2:target ~ .image-container{
+        left: -220px;
+    }
+    #slider-image-3:target ~ .image-container{
+        left: -440px;
+    }
+    #slider-image-4:target ~ .image-container{
+        left: -660px;
+    }
+
+    .button-container{ 
+        top: -35px; 
+    }
+    
+}

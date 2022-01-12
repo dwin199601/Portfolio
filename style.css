@@ -1,0 +1,798 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*sets how the total width and height of an element is calculated*/
+}
+body{
+    margin-top: 1rem;
+    
+}
+main{
+   
+    min-height: 100vh;
+    background: linear-gradient(to right top, #38aa8e, #8877e9); /* to mix two colors*/
+    display: flex; /* to align content to the center*/
+    align-items: center;/* to align content to the center*/
+    justify-content: center;/* to align content to the center*/
+    font-family: 'Lato', sans-serif;
+}
+
+h1{
+    color: #110557;
+    font-weight: 600;
+    font-size: 2rem;
+    opacity: 0.8;
+}
+.alexBlock{ /* we are going to show it only when the screen size is small */
+    display: none;
+    
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to left top, rgba(255,255,255,1),
+    rgba(114, 107, 218, 0.6));
+    border-radius: 2px;
+    max-height: 120px;
+   
+    padding: 1rem;
+    box-shadow: 6px 6px 20px/* 20px represent the amount of blure*/
+    rgba(51, 50, 50, 0.5);
+     /* to put space between elements*/
+}
+.navbar{
+    background-color: #09032b;
+    width: 100%;
+    height: 60px;
+    display: flex;
+   
+}
+
+.navbar a{
+    text-decoration: none;
+    
+}
+.navbar h1{
+    color: white;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: color 0.8s ease-in 0.5s, font-size 1.5s ease,
+    text-shadow 2s cubic-bezier(0.6, 0, 0.8, 0.5);
+}
+
+.navbar h1:hover{
+   
+  color: rgb(218, 230, 57);
+  font-size: 2.2em;
+  text-shadow: rgba(248, 248, 245, 0.5) 6px -3px 8px;
+}
+.navbar .lefside{
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+
+}
+
+.navbar .rightside{
+    flex: 50%;
+    display: flex;
+    justify-content: right;
+    margin-right: 20px;
+    align-items: center;
+}
+
+
+.content{
+    background-color: wheat;
+    min-height: 80vh;
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right bottom,
+     rgba(247, 205, 70, 0.5), 
+     rgba(228, 222, 166,0.5));
+     border-radius: 10px;
+     z-index: 2; /* to position element behind*/
+     backdrop-filter: blur(2rem); /*to blur element */
+     display: flex; /* to split dash and background section
+     equally, we need to set flex:1 for both*/
+}
+
+.circle1, .circle2{
+    background-color: wheat;
+    background: linear-gradient(to right bottom,
+    rgba(250, 250, 250, 0.8), 
+    rgba(238, 4, 16, 0.3));
+
+    height: 15rem; /* must be the same as height*/
+    width: 15rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1{
+  top: 15%;
+  right: 15%;
+
+}
+
+
+.circle2{
+  bottom: 5%;
+  left: 10%;
+}
+
+.user img{
+    height: 120px;
+    width: 100px;
+    margin: 2rem;
+   
+    border: rgb(173, 156, 218);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50%;
+}
+.user img:hover{
+
+   
+    border-color: bisque;
+}
+
+
+
+.link{
+display: flex;
+margin: 20px;
+padding: 1rem;
+align-items: center;
+}
+.link h3{
+ padding: 10px;
+}
+.link h3:hover{
+    color: #38aa8e;
+}
+.link a{
+    text-decoration: none;
+    color: #07021b;
+}
+
+
+.link img{
+    height: 25px;
+    width: 25px;
+}
+.dash {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* this property doesn't work 
+    without display:flex!!*/
+    text-align: center;
+    background-color: rgba(8, 18, 110, 0.5); 
+    border-radius: 10px;
+}
+
+.background{
+    flex: 2;
+}
+
+.sidebar{
+    margin: 1rem;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right bottom,
+    rgba(250, 250, 250, 0.8), 
+    rgba(238, 4, 16, 0.3));
+
+}
+.sidebar a{
+    text-decoration: none;
+    color: #07021b;
+}
+
+.sidebar a:hover{
+   
+    color: #1bddc3;
+}
+.sidebar:hover{
+    cursor: pointer;
+   
+}
+
+
+
+/* BACKGROUD SECTION */
+.topepart{
+    margin-bottom: 2rem;
+    margin-left: 3rem;
+    margin-top: 20px;
+    box-shadow: 6px 6px 20px 
+    rgba(51, 50, 50, 0.8);
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.skill img{
+    height: 100px;
+    width: 100px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.skill img:hover{
+    animation-name: rotatethis;
+    animation-duration: 4s;
+  }
+
+  @keyframes rotatethis {
+    0% {
+      transform: rotate(5deg);
+      border-color: aqua;
+    }
+    25% {
+      transform: rotate(90deg);
+      border-color: aquamarine;
+    }
+    50% {
+      transform: rotate(180deg);
+      border-color: cadetblue;
+    }
+    100% {
+      transform: rotate(360deg);
+      border-color: white;
+    }
+  }
+
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 2rem;
+    
+}
+.skill{
+    display: flex;
+    background: linear-gradient(to left top, rgba(255,255,255,1),
+    rgba(230, 225, 225, 0.6));
+    border-radius: 10px;
+    margin: 1rem 0rem;
+    padding: 1rem;
+    box-shadow: 6px 6px 20px/* 20px represent the amount of blure*/
+    rgba(51, 50, 50, 0.5);
+    justify-content: space-between; /* to put space between elements*/
+}
+
+.ProgressBox{
+ display: flex;
+ width: 100%;
+}
+.ProgressBox h2{
+    font-weight: bold;
+    font-size: 1rem;
+    margin: 5px;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(41, 37, 2, 0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent
+}
+
+.ProgressBar1{
+    margin-top: 10px;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(228, 222, 166,0.5));
+    width: 200px;
+    height: 60%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProgressBar1::after{
+ content: ""; /* we must put content to display it*/
+ width: 200px;
+ height: 100%;
+ 
+ background-color: rgb(18, 202, 202);
+ position: absolute;
+ right: 30%;
+ 
+}
+
+.ProgressBar2{
+    margin-top: 10px;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(228, 222, 166,0.5));
+    width: 200px;
+    height: 60%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProgressBar2::after{
+ content: ""; /* we must put content to display it*/
+ width: 200px;
+ height: 100%;
+ background-color: rgb(202, 175, 18);
+ position: absolute;
+ right: 35%;
+ 
+}
+
+.ProgressBar3{
+    margin-top: 10px;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(228, 222, 166,0.5));
+    width: 200px;
+    height: 60%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProgressBar3::after{
+ content: ""; /* we must put content to display it*/
+ width: 200px;
+ height: 100%;
+ background-color: rgb(10, 119, 19);
+ position: absolute;
+ right: 30%;
+ 
+}
+
+
+.ProgressBar4{
+    margin-top: 10px;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(228, 222, 166,0.5));
+    width: 200px;
+    height: 60%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProgressBar4::after{
+ content: ""; /* we must put content to display it*/
+ width: 200px;
+ height: 100%;
+ background-color: rgb(13, 172, 26);
+ position: absolute;
+ right: 35%;
+ 
+}
+
+
+.ProgressBar5{
+    margin-top: 10px;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(228, 222, 166,0.5));
+    width: 200px;
+    height: 60%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProgressBar5::after{
+ content: ""; /* we must put content to display it*/
+ width: 200px;
+ height: 100%;
+ background-color: rgb(219, 17, 51);
+ position: absolute;
+ right: 25%;
+ 
+}
+
+
+.ProgressBar6{
+    margin-top: 10px;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(228, 222, 166,0.5));
+    width: 200px;
+    height: 60%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProgressBar6::after{
+ content: ""; /* we must put content to display it*/
+ width: 200px;
+ height: 100%;
+ background-color: rgb(47, 14, 236);
+ position: absolute;
+ right: 40%;
+ 
+}
+
+.ProgressBar7{
+    margin-top: 10px;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(228, 222, 166,0.5));
+    width: 200px;
+    height: 60%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProgressBar7::after{
+ content: ""; /* we must put content to display it*/
+ width: 200px;
+ height: 100%;
+ background-color: rgb(18, 192, 33);
+ position: absolute;
+ right: 30%;
+ 
+}
+
+.ProgressBar8{
+    margin-top: 10px;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(228, 222, 166,0.5));
+    width: 200px;
+    height: 60%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProgressBar8::after{
+ content: ""; /* we must put content to display it*/
+ width: 200px;
+ height: 100%;
+ background-color: rgb(212, 154, 27);
+ position: absolute;
+ right: 30%;
+ 
+}
+
+
+.ProgressBar9{
+    margin-top: 10px;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(228, 222, 166,0.5));
+    width: 200px;
+    height: 60%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProgressBar9::after{
+ content: ""; /* we must put content to display it*/
+ width: 200px;
+ height: 100%;
+ background-color: rgb(38, 52, 240);
+ position: absolute;
+ right: 25%;
+}
+
+.ProgressBar10{
+    margin-top: 10px;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(228, 222, 166,0.5));
+    width: 200px;
+    height: 60%;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.ProgressBar10::after{
+ content: ""; /* we must put content to display it*/
+ width: 200px;
+ height: 100%;
+ background-color: rgb(38, 52, 240);
+ position: absolute;
+ right: 35%;
+}
+
+.skillinfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.percentage{
+    font-weight: bold;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(228, 222, 166,0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent
+
+}
+
+.skill1{
+    display: flex;
+    background: linear-gradient(to left top, rgba(255,255,255,1),
+    rgba(255,255,255,0.6));
+    border-radius: 10px;
+    margin: 1rem 0rem;
+    padding: 1rem;
+    box-shadow: 6px 6px 20px/* 20px represent the amount of blure*/
+    rgba(51, 50, 50, 0.5);
+    
+}
+.others{
+    margin: 20px;
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row wrap;
+}
+.others p {
+    flex: 1 1 50px;
+    margin: 10px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(to right bottom,
+    rgba(7, 3, 238, 0.5), 
+    rgba(230, 10, 46, 0.5));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent
+}
+
+@media screen and (max-width: 1130px) {
+
+
+    .skill1{
+      width: 90%;
+    }
+    .others p {
+         flex: 1 1 10px;
+         margin: 5px;
+         font-size: 15px;
+       
+    }
+
+    .skill{
+        margin: 12px 0rem;
+        padding: 12px;
+        width: 90%;
+    }
+    .skill img{
+        height: 70px;
+        width: 80px;
+        
+    }
+    .skillinfo h2{
+        font-size: 1rem;
+    }
+
+    .skill {
+        position: relative;
+    }
+
+    .percentage{
+        position: absolute;
+        left: 80%;
+    
+    }
+
+    .ProgressBar1, .ProgressBar2, .ProgressBar3,
+    .ProgressBar4, .ProgressBar5, .ProgressBar6,
+    .ProgressBar7, .ProgressBar8, .ProgressBar9,
+    .ProgressBar10 {
+        width: 150px;
+    }
+   
+}
+
+@media screen and (max-width: 1000px) {
+
+    .skill{
+    width: 320px;
+    }
+
+    .content{
+    width: 70%;
+    }
+
+}
+@media screen and (max-width: 800px) {
+
+    
+.content{    
+  width: 80%;
+        }
+
+}
+
+@media screen and (max-width: 700px) {
+
+    
+    .content{
+        display: flex;
+        flex-flow: row wrap;
+    }
+    .sidebar{
+        display: none;
+        
+    }
+
+    .dash{
+        display: flex;
+        border-radius: 2px;
+        
+    }
+
+    .user{
+        display: none;
+    }
+    
+    .links{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .link{
+        margin: 2px;
+    }
+    .link img{
+      width: 15px;
+      height: 15px;
+    }
+
+    .link h3{
+        font-size: 12px;
+    }
+    
+
+
+    .alexBlock{
+        display: flex;
+        
+    }
+    .alexBlock img{
+       width: 70px;
+       height: 100px;
+       border-radius: 10px;
+    }
+    .boxForText h3{
+        margin-top: 10px;
+       font-size: 15px;
+    }
+   .skills{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+    }
+
+   .topepart{
+        margin-left: 25%;
+    }
+
+}
+@media screen and (max-width: 590px) {
+ .link h3{
+     display: none;
+ }
+ .topepart{
+    margin-left: 15%;
+}
+}
+
+@media screen and (max-width: 500px) {
+
+.navbar h1{
+    font-size: 15px;
+    text-shadow: 1s;
+}
+.navbar h1:hover{
+font-size: 15px;
+}
+}
+
+@media screen and (max-width: 480px) {
+    
+    .content{
+    width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 400px) {
+
+    .lefside h1{
+        display: none;
+    }
+    .navbar .rightside{
+        flex: 100%;
+    }
+    .navbar h1{
+        font-size: 12px;
+    }
+    .boxForText{
+        padding: 10px;
+    }
+
+    .boxForText h2{
+        font-size: 15px;
+    }
+    .boxForText h3{
+        font-size: 10px;
+    }
+    .alexBlock{ /* we are going to show it only when the screen size is small */
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .skill{
+        max-width: 270px;
+    }
+    .skill img{
+        width: 45px;
+        height: 45px;
+    }
+    .percentage{
+        font-weight: normal;
+         font-size: 15px;
+         background: rgba(6, 31, 85, 0.7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent
+    }
+    .ProgressBox h2{
+        font-size: 12px;
+    }
+
+
+    .skill1{
+        margin: 10px;
+        padding: 10px; 
+        max-width: 270px;
+    }
+    .skill1 h1{
+      font-size: 20px;
+    }
+
+    .others p {
+        font-size: 12px;
+        font-weight: normal;
+       
+    }
+}
+
+@media screen and (max-width: 340px) {
+
+    .skills{
+        justify-content:center;
+        margin: 2px;
+        width: 100%;
+    }
+    
+
+    .topepart{
+        margin-bottom: 10px;
+        margin-top: 10px;
+        width: 150px;
+       
+        margin-left: 25%;
+       
+    }
+    .topepart h1{
+        font-size: 20px;
+        margin: 5px;
+    }
+}

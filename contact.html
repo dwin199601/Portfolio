@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Contact</title>
+</head>
+
+<nav class="navbar">
+
+    <div class="lefside">
+        <h1>Portfolio</h1>
+    </div>
+
+    <div class="rightside">
+        <a href="index.html">
+            <h1>Home</h1>
+        </a>
+        <a href="experiance.html">
+            <h1>Experience</h1>
+        </a>
+        <a href="education.html">
+            <h1>Education</h1>
+        </a>
+        <a href="contact.html">
+            <h1>Contact</h1>
+        </a>
+    </div>
+</nav>
+
+
+<body>
+
+
+    <span class="Main">
+        <div class="contactUs">
+            <form>
+                <input type="hidden" name="_subject" value="New Message From the Website!">
+                <div class="form_group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" name="first_name" placeholder="First Name">
+                    <div class="errorHint hidden">First Name is required!</div>
+                </div>
+
+                <div class="form_group">
+                    <label for="last_name">Last Name</label>
+                    <input type="text" name="last_name" placeholder="Last Name">
+                    <div class="errorHint hidden">Last Name is required!</div>
+                </div>
+
+                <div class="form_group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" placeholder="Your Email">
+                    <div class="errorHint hidden">Correct email is required!</div>
+                </div>
+
+                <div class="form_group">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" name="phone" placeholder="Your phone">
+                    <div class="errorHint hidden">Correct phone number is required!</div>
+                </div>
+
+                <div class="form_group">
+                    <label for="message">Message</label>
+                    <textarea type="text" name="message" placeholder="Your message">
+
+                </textarea>
+                </div>
+                <div class="form_group"><button>Submit</button></div>
+
+
+
+
+            </form>
+            <div class="Oops hidden">
+                <img src="images/Oops.jpg" alt="image" />
+                <p>Opps, something went wrong, contact me directly by using phone or email!</p>
+            </div>
+        </div>
+
+
+        <div class="directContact">
+            <span class="directContBox">
+                <h2>You can contact me directly</h2>
+                <ul>
+                    <li>Email me: <a href="mailto:dwin13672@gmail.com">dwin13672@gmail.com</a></li>
+                    <li>Call me: <a href="tel:+12368630646">+1 236-863-0646</a></li>
+                </ul>
+
+                <br>
+            </span>
+
+
+
+    </span>
+</body>
+
+<script src="form.js"></script>
+</div>
+
+</html>
