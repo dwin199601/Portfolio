@@ -24,11 +24,11 @@ font-family: 'Lato', sans-serif;
 
 .directContBox{
     background: rgba(56, 56, 55, 0.4);
-    max-height: 35vh;
-    padding: 1rem;
+    height: 35vh;
+    padding: 10px;
     border-radius: 5px;
-    
 }
+
 .directContBox h2{
    font-size: 1.7rem;  
 }
@@ -67,7 +67,7 @@ form{
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    width: 60%;
+    
 }
 
 
@@ -101,7 +101,7 @@ textarea{
 }
 form button{
     margin-top: 1rem;
-    width: 100px;
+    max-width: 100px;
     font-size: 20px;
     border-radius: 5px;
     background-color: white;
@@ -145,14 +145,29 @@ form button:hover{
   rgba(51, 50, 50, 0.8);
   margin-bottom: 1rem;
 }
-
-@media screen and (min-width: 1000px) {
-
-    form{
-        max-height: 75%;
+@media screen and (max-width: 1575px), (min-width: 1000px) {
+    .form_group{
+        margin-top: 1rem;
     }
-   
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+    .form_group{
+        margin-top: 5px;
+    }
+
+    .directContBox{
+        margin: 10px;
+        max-height: 30vh;
+     }
  
+     .Main{
+         min-height: 150vh;
+         }
+
 }
 @media screen and (max-width: 500px) {
 
