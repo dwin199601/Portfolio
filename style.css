@@ -689,11 +689,15 @@ align-items: center;
 
 }
 @media screen and (max-width: 590px) {
- .link h3{
-     display: none;
- }
- .topepart{
-    margin-left: 15%;
+    .lefside h1{
+        display: none;
+    }
+
+    .link h3{
+        display: none;
+    }
+    .topepart{
+        margin-left: 15%;
 }
 }
 
