@@ -34,9 +34,7 @@ h1{
     max-height: 120px;
    
     padding: 1rem;
-    box-shadow: 6px 6px 20px/* 20px represent the amount of blure*/
-    rgba(51, 50, 50, 0.5);
-     /* to put space between elements*/
+   
 }
 .navbar{
     background-color: #09032b;
@@ -62,7 +60,7 @@ h1{
    
   color: rgb(218, 230, 57);
   font-size: 2.2em;
-  text-shadow: rgba(248, 248, 245, 0.5) 6px -3px 8px;
+  text-shadow: rgba(248, 248, 245, 0.5) 6px 3px 8px;
 }
 .navbar .lefside{
     flex: 50%;
