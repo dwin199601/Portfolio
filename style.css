@@ -125,10 +125,7 @@ h1{
     width: 100px;
     margin: 2rem;
    
-    border: rgb(173, 156, 218);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 50%;
+   
 }
 .user img:hover{
 
